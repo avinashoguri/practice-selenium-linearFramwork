@@ -18,7 +18,7 @@ public class Calc {
 		
 
 		for(int i=0;i<=4;i++){
-		double a[]={15,2,0,50,5};
+		double expertedResult[]={15,2,0,50,5};
 			//String x=Float.toString(a[i]);
 			
 			obj.findElement(By.xpath("html/body/div[3]/div/form/input[1]")).sendKeys("10");
@@ -28,11 +28,11 @@ public class Calc {
 			obj.findElement(By.xpath(".//*[@id='gobutton']")).click();
 			Thread.sleep(5000);
 			String s=obj.findElement(By.xpath("html/body/div[3]/div/form/h2")).getText();
-			double value = Double.parseDouble(s);
-			System.out.println(a[i]);
-			System.out.println(s);
-			if(a[i]==value){
-				System.out.println(value+"="+s+"/n test pass");
+			double actuvalResult = Double.parseDouble(s);
+		
+		
+			if(expertedResult[i]==actuvalResult){
+				System.out.println(actuvalResult+"="+s+"/n test pass");
 			}
 			else{
 				System.out.println(" test fail");
