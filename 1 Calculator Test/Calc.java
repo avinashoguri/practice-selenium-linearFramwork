@@ -35,8 +35,7 @@ public class Calc {
 				System.out.println(actuvalResult+"="+s+"/n test pass");
 			}
 			else{
-				System.out.println(" test fail");
-			}
+                              System.out.println(actuvalResult"+s+"/n test fail");			}
 		}
 		obj.close();
 
